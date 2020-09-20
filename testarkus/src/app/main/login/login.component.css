@@ -1,0 +1,48 @@
+.wrapAll{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 144, 243, 1) 0%, rgba(0, 108, 183, 1) 100%);
+    box-sizing: border-box;
+    padding-top: 25px;
+}
+
+.loginForm{
+    height: 50%;
+    width: 50%;
+    border-radius: 5px;
+    background:#f1f1f6;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.wrong{
+    background: salmon;
+    color:salmon;
+}
+
+.Title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+  
+  .full-width {
+    width: 100%;
+  }
+
+  .loginForm{
+    min-width: 150px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%
+  }
+
+  .submitButton{
+    background: rgba(0, 144, 243, 1);
+    color: white;
+    font-weight: 700;
+  }
