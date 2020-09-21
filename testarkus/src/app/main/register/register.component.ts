@@ -10,32 +10,33 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  username="";
+  username = "";
   password = "";
-  isRegister=false;
+  isRegister = false;
   registerForm = new FormGroup(
     {
-    username: new FormControl('',Validators.compose([Validators.required, Validators.minLength(4)])),
-    password: new FormControl('',Validators.compose([Validators.required, Validators.minLength(4)])),
-    DOB: new FormControl('', Validators.required),
+      username: new FormControl('', Validators.compose([Validators.required, Validators.minLength(4)])),
+      password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(4)])),
+      DOB: new FormControl('', Validators.required),
 
     }
   )
   constructor(
     private router: Router,
-    private API:RequestService
+    private API: RequestService
   ) { }
 
   ngOnInit() {
   }
 
-  Submit(){
+  Submit() {
     var data = {
       username: this.registerForm.value.username,
       password: this.registerForm.value.password,
-      dob: this.registerForm.value.DOB
+      dob: this.registerForm.value.DOB,
+      isAdmin: false
     }
-    this.API.reqPOST("/users",data)
+    this.API.reqPOST("/users", data)
       .pipe(first())
       .subscribe(res => {
         console.log(res);
@@ -45,11 +46,11 @@ export class RegisterComponent implements OnInit {
         // }
 
       });
-    localStorage.setItem("currentUser",this.registerForm.value.username);
+    localStorage.setItem("currentUser", this.registerForm.value.username);
     this.router.navigate(['']);
   }
 
-  gotoLogin(){
+  gotoLogin() {
     this.router.navigate(['/login']);
   }
 
