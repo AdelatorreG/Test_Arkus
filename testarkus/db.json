@@ -41,7 +41,15 @@
       "username": "test",
       "password": "test1234",
       "dob": "2020-09-19T07:00:00.000Z",
-      "id": 4
+      "id": 4,
+      "isAdmin": false
+    },
+    {
+      "username": "Willie",
+      "password": "Scotland",
+      "dob": "1970-07-30T08:00:00.000Z",
+      "isAdmin": false,
+      "id": 5
     }
   ]
 }
