@@ -36,6 +36,12 @@
       "dob": "2020-09-15T07:00:00.000Z",
       "id": 3,
       "isAdmin": false
+    },
+    {
+      "username": "test",
+      "password": "test1234",
+      "dob": "2020-09-19T07:00:00.000Z",
+      "id": 4
     }
   ]
 }
