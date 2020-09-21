@@ -15,6 +15,10 @@
               <input [(ngModel)]="password"  matInput placeholder="password" required minlength="4" name="psw" id="psw" #psw="ngModel" type="password">
             </mat-form-field>
           </form>
-          <button *ngIf="psw.valid && user.valid" class="submitButton" mat-button color="accent" (click)="Submit()">Login</button>
+          <div class="wraoButtons">
+            <button *ngIf="psw.valid && user.valid" class="submitButton" mat-button color="accent" (click)="Submit()">Login</button>
+            <p class="RegisterText" (click)="gotoRegister()">Register</p>
+          </div>
+         
     </div>
 </div>

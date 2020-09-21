@@ -7,12 +7,20 @@ import { map } from 'rxjs/operators';
 })
 export class RequestService {
 
-  API: string = "https://api.rushstarwireless.com/web_api_crm"; 
-  // API: string = "http://rodolforodrdcf6:43565";
+  API: string = "http://localhost:3000";
   constructor(private http: HttpClient) { }
 
   reqGET(url:string){
     return this.http.get<any>(this.API + url)
+    .pipe(map(data => {
+      return data;
+    }, err => {
+      return err;
+    }));
+  }
+
+  reqDELETE(url:string){
+    return this.http.delete<any>(this.API + url)
     .pipe(map(data => {
       return data;
     }, err => {

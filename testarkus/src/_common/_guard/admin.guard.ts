@@ -7,7 +7,7 @@ import { first } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AdminGuard implements CanActivate {
 
     constructor(
         private router: Router
@@ -18,19 +18,14 @@ export class AuthGuard implements CanActivate {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ) {
-        if (localStorage.getItem('currentUser')) {
+        if (localStorage.getItem('currentUser')=="admin") {
             return true;
         } else {
-            this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+            this.router.navigate(['/']);
             return false;
         }
 
 
 
-    }
-
-    LogOut(){
-        localStorage.removeItem("currentUser");
-        this.router.navigate(['/login'])
     }
 }

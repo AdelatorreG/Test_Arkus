@@ -1,0 +1,24 @@
+<div class="wrapAll">
+    <div class="wrapMain">
+        <div class="wrapTimer">
+                Welcome to the Admin panel
+            
+        </div>
+        
+        <div class="wrapUsers">
+            <div class="user" *ngFor="let user of users">
+                <div>
+                    <p>{{user.username}}</p>
+                </div>
+                <div>
+                    {{user.dob | date}}
+                </div>
+                <div>
+                    <span class="material-icons" (click)="deleteUser(user)">
+                        delete
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,30 @@
-<p>default works!</p>
+<div class="wrapAll">
+    <div class="wrapMain">
+        <div class="wrapTimer">
+            <div class="counter" *ngIf="counter>0 || achievements">
+                {{counter}}
+            </div>
+            <div class="counter" *ngIf="counter==0 && !achievements">
+                Welcome click anywhere to start
+            </div>
+            
+        </div>
+        <div class="wrapButton">
+            <div class="checkValue" *ngIf="counter>0 || achievements" (click)="getAcheivemnt(counter)">Check Acheivements for wasting time</div>
+        </div>
+        
+        <div class="wrapAcheivements">
+            <div class="acheivement" *ngFor="let achievement of achievements">
+                <div>
+                    <p>{{achievement.title}}</p>
+                    <span class="material-icons" [ngStyle]="{'color': achievement.color}">
+                        star_rate
+                        </span>
+                </div>
+                <div>
+                    {{achievement.text}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

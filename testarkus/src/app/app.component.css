@@ -1,0 +1,13 @@
+.logout {
+        background: #f1f1f6;
+        overflow: hidden;
+        position: fixed;
+        top: 10px;
+        width: 70px;
+        border-top-right-radius: 10px;
+        display: none;
+        border-bottom-right-radius: 10px;
+}
+.logout--nothidden {
+    display: block;
+}

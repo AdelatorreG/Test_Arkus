@@ -25,28 +25,28 @@
     padding: 15px 80px;
 }
 
-.wrapAcheivements{
+.wrapUsers{
     width: 100%;
     padding:10px;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: repeat(3, 100px);
+    grid-template-rows: 50px;
     background: #f1f1f6;
     grid-gap: 10px;
 }
 
-.wrapAcheivements .acheivement{
+.wrapUsers .user{
     border-radius: 5px;
     border-style: solid;
     border-color: lightgray;
     border-width: 1px;
     display:grid;
     grid-gap: 5px;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 150px 1fr 50px;
     grid-template-rows: repeat(75px);
 }
 
-.wrapAcheivements .acheivement div{
+.wrapUsers .user div{
     box-sizing: border-box;
     padding:5px;
     border-right-style: solid;
@@ -57,15 +57,31 @@
     border-left-width: 1px;
 }
 
-.acheivement div:first-child{
+.user div:first-child{
     text-align: center;
+    font-weight: 700;
+    
 }
+
+.user div:last-child{
+    text-align: center;
+    font-weight: 700;
+
+    padding: 12px !important;
+    box-sizing: border-box;
+}
+
 
 .wrapButton{
     min-height: 90px;
 }
 
 .material-icons{
-    margin-right: auto;
-    margin-left:auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.material-icons:hover{
+    
+    color:rgba(0, 144, 243, 1) !important;
 }

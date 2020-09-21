@@ -1,0 +1,6 @@
+<div class="nest--background">
+    <p class="link" *ngIf="isAddmin" routerLink="/admin" >Go to Admin</p>
+    <p class="link" *ngIf="inAdmin" routerLink="/" >Back to Main Page</p>
+    <p class="link" (click)="Logout()">Logout</p>
+
+</div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButton, MatDialog, MatDialogModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule} from '@angular/material'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -16,6 +17,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule ,
+    HttpClientModule,
   FormsModule ],
   exports:[MatDialogModule, 
     MatButtonModule,
@@ -24,7 +26,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

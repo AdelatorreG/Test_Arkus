@@ -1,0 +1,41 @@
+{
+  "achievements": [
+    {
+      "id": 1,
+      "time": 1,
+      "title": "Inpatient Monkey",
+      "text": "It barely started, Jesus",
+      "color": "#804A00"
+    },
+    {
+      "id": 2,
+      "time": 5,
+      "title": "Busy Bee",
+      "text": "I get it you have better things to do",
+      "color": "#C0C0C0"
+    },
+    {
+      "id": 3,
+      "time": 10,
+      "title": "Patient Cat",
+      "text": "You took your time and now you won't be roadkill ....probably",
+      "color": "#F0E68C"
+    }
+  ],
+  "users": [
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "password",
+      "dob": "",
+      "isAdmin": true
+    },
+    {
+      "username": "awedsa",
+      "password": "31412312",
+      "dob": "2020-09-15T07:00:00.000Z",
+      "id": 3,
+      "isAdmin": false
+    }
+  ]
+}
